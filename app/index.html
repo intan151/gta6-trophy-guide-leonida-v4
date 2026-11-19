@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: official names, descriptions and grades, a roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <h1>Leonida <span>Ledger</span></h1>
+    <p class="tagline">Every GTA 6 trophy on PlayStation 5 — the official list, a guide to each, and your progress, saved in this browser. Works offline.</p>
+    <div class="progress-strip">
+      <div class="big-count"><span id="earned-count">0</span><small> / 55 earned</small></div>
+      <div class="progress-bar" role="progressbar" aria-label="Trophies earned"><i id="progress-fill" style="width:0%"></i></div>
+      <div class="grade-counts" id="grade-counts">Platinum 0/1 · Gold 0/2 · Silver 0/6 · Bronze 0/46</div>
+    </div>
+  </div>
+</header>
+<nav class="nav" aria-label="Views">
+  <div class="wrap" id="view-nav">
+    <button data-view="tracker" aria-current="true">Tracker</button>
+    <button data-view="roadmap">Roadmap to Platinum</button>
+    <button data-view="missables">Missables</button>
+    <button data-view="settings">Settings &amp; About</button>
+  </div>
+</nav>
+<main class="wrap">
+  <div class="layout">
+    <aside class="panel filters" id="filters-panel" aria-label="Filters">
+      <h2>Find a trophy</h2>
+      <label for="search">Search</label>
+      <input type="search" id="search" placeholder="Name, mission, keyword…" autocomplete="off">
+      <label for="grade-filter">Grade</label>
+      <select id="grade-filter">
+        <option value="">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+      <label>Kind</label>
+      <div class="chips" id="kind-chips" role="group" aria-label="Kind filters"></div>
+      <label class="switch"><input type="checkbox" id="missable-only"> <span>Missable only</span></label>
+      <label class="switch"><input type="checkbox" id="unearned-only"> <span>Not yet earned only</span></label>
+      <label class="switch"><input type="checkbox" id="spoiler-toggle"> <span>Spoiler mode — hide story trophy names &amp; descriptions until earned</span></label>
+      <h3>Your progress</h3>
+      <div class="row-actions">
+        <button class="btn" id="export-btn" type="button">Export progress</button>
+        <button class="btn" id="import-btn" type="button">Import progress</button>
+        <input type="file" id="import-file" accept=".json,application/json" hidden>
+      </div>
+      <div class="row-actions">
+        <button class="btn danger" id="reset-btn" type="button">Reset all progress</button>
+      </div>
+      <p class="hint">Progress, notes and settings are saved in this browser only (localStorage). Nothing is sent anywhere — this guide makes no network request.</p>
+      <h3>Keys</h3>
+      <p class="hint"><span class="kbd">/</span> focus search · <span class="kbd">1</span> tracker · <span class="kbd">2</span> roadmap · <span class="kbd">3</span> missables · <span class="kbd">s</span> spoiler mode</p>
+    </aside>
+    <section id="main-view" aria-live="polite">
+      <div class="list-head">
+        <h2 id="view-title">All trophies</h2>
+        <span class="count-line" id="count-line">55 trophies</span>
+      </div>
+      <div id="trophy-list"></div>
+      <div id="roadmap-view" hidden></div>
+      <div id="missables-view" hidden></div>
+      <div id="settings-view" hidden></div>
+    </section>
+    <aside class="panel detail" id="detail-panel" aria-label="Trophy guide">
+      <h2>Guide</h2>
+      <div id="detail-body"><p class="empty">Select a trophy to read its guide, tip and sources.</p></div>
+    </aside>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p><strong>Sources.</strong> Trophy names, descriptions, grades and hidden flags: the official PlayStation 5 list as published on Exophase and PSNProfiles, which agree on every entry. Every guide is written in our own words from those official descriptions and says so where a place or step is not yet checked in the game. No Rockstar logo or official artwork is used.</p>
+    <p>Leonida Ledger — an open, offline trophy guide. 55 trophies: 1 platinum, 2 gold, 6 silver, 46 bronze, 28 hidden.</p>
+  </div>
+</footer>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
